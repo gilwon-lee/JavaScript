@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script>
+		// //표기법 1
+		// let add =new Function("x,y","return x+y");
+		// document.write(add(3,6)+"<br/>");
+		// //표기법 2
+		// let add2 = function(x,y){
+		// 	return x+y;
+		// }
+		// document.write(add2(3,5)+"<br/>");
+		// //표기법 3
+		// function add3(x,y){
+		// 	return x+y;
+		// }
+		// document.write(add3(3,9)+"<br/>");
+
+		function add3(x,y){
+			console.log(arguments.length);
+			return x+y;
+		}
+		// 자바스크립트는 매개변수는 의미가 없음
+		// 자바스크립트 선언한 변수 모두를 받을 수 있으며 순서대로 받는다
+		// 자바 스크립트는 인수를 여러개 사용해도 매개변수의 갯수 만큼만 사용한다
+		// 함수에 맞는 객체 생성 x -> 객체 생성 후 객체에 맞게 함수를 사용
+
+		document.write(add3(3,9,2,3,4)+"<br/>");
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script>
+		//JSON.parse -> 제이슨 형식으로 온 문자열 데이터를 
+		//제이슨 형식으로 파싱해줌
+		let data =JSON.parse('{"id":1,"title":"aaa"}');
+		console.log(data.title);
+
+		let data2 = {id:2,title:"bbb"};
+		console.log(data2.id);
+		let json =JSON.stringify(data2);
+		console.log(json);
+	</script>
+</body>
+</html>

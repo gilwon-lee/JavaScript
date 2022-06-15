@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script>
+		//자바스크립트에서는 Object()가 map을 제공해준다.
+/* 		let exam = new Object();
+		exam.kor = 30;
+		exam.eng = 40;
+		exam.math = 50; 
+		exam.kor =50;*/
+		let exam ={"kor":30,"eng":40,"math":50};
+		let arr =[3,4,5,6,exam,[7,8,9]]; 
+		console.log(exam.kor+exam.eng);
+		console.log(arr[5][1]);
+		//exam.kor -> 기본으로 object에 값을 넣을 때(java Map)
+		//exam["kor"] -> 변수를 이용하여 값을 꺼낼 수 있음
+		
+		let notice = {"id":1,"title":"hello"};
+		console.log(notice["title"]);
+	</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+
+<body>
+	<script>
+		let x = new Number(3);
+		let y = 4 ;
+		let z;
+		z=3;
+		//alert(x+y);
+		//console.log(z);
+		//console.log(typeof x);
+		
+		let nums = new Array();
+		
+		nums.push(3);
+		nums.push(4);
+		nums.push(5);
+		console.log(nums);
+		/* 넣은 순 역순으로 꺼내진다(stack) 
+		pop을 쓰면 배열에서 아예 사라지게 됨*/
+		let n1=nums.pop();
+		//console.log(nums);
+		let n2=nums.pop();
+		//console.log(nums);
+		let n3=nums.pop();
+		//console.log(n1,n2,n3);
+		
+		let arr = new Array(2,3,"hello",7);
+		
+		console.log(arr);
+
+		//.sploce(자를위치,자를 갯수,교체할 값)  
+		arr.splice(2,1,"replace");
+		
+		console.log(arr);
+		
+	</script>
+</body>
+</html>

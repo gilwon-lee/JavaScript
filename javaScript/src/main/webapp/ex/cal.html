@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/calculator.js"></script>
+</head>
+<body>
+    <section>
+        <h1>계산기 프로그램</h1>
+        <div>
+            <input class="txt-x" type="text" value="0"/>
+            +
+            <input class="txt-y" type="text" value="0"/>
+            <input class="sum" type="button" value="="/>
+            <input class="result" type="text" value="0" readonly/>
+        </div>
+    </section>
+
+    <section id="section2">
+        <h1>엘리먼트 선택 방법</h1>
+        <div>
+            <input id="txt-x" type="text" value="0"/>
+            +
+            <input id="txt-y" type="text" value="0"/>
+            <input id="sum" type="button" value="="/>
+            <input id="result" type="text" value="0" readonly/>
+        </div>
+    </section>
+
+    <section id="section3">
+        <h1>셀렉터즈 API</h1>
+        <div>
+            <input name="x" type="text" value="0"/>
+            +
+            <input class="txt-y" type="text" value="0"/>
+            <input class="sum" type="button" value="="/>
+            <input class="result" type="text" value="0" readonly/>
+        </div>
+    </section>
+
+    <section id="section4">
+        <h1>chlidnodes를 이용한 노드 선택</h1>
+        <!-- childNodes : 빈 공백도 number로 인식해서 나오지 않음  -->
+        <div class="box"><input/><input/>
+        </div>
+    </section>
+
+
+</body>
+</html>

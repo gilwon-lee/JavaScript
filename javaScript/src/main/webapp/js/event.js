@@ -1,4 +1,42 @@
-//section7
+//section9
+//container의 오프셋을 이용하여 박스 좌표 설정
+//마우스 이벤트 catch
+window.addEventListener("load",function(){
+    let section =document.querySelector("#section9");
+    let container =section.querySelector(".container");
+    let status =section.querySelector(".status");
+    let dragging =false;
+    let offset ={x:0,y:0};
+    let current = null;
+    let left = container.offsetLeft;
+    let top = container.offsetTop;
+    section.onmousedown =(e)=>{
+        if(e.target.classList.contains("box")){
+            dragging =true;
+            current = e.target;
+            //박스 기준 offset
+            offset.x= e.offsetX;
+            offset.y= e.offsetY;
+        }
+        console.log(e.offsetX,e.offsetY);
+    };
+
+    section.onmouseup =(e)=>{
+        dragging =false;
+    };
+    section.onmousemove =(e)=>{
+        let x =e.pageX-offset.x-left;
+        let y =e.pageY-offset.y-top;
+        if(dragging){
+            current.style.left=x+"px";
+            current.style.top=y+"px";
+            status.innerText = "(x,y):("+x+","+y+")";
+        }
+    };
+
+})
+
+//section8
 //여러개 박스 옮기기
 window.addEventListener("load",function(){
     let section =document.querySelector("#section8");
@@ -7,8 +45,10 @@ window.addEventListener("load",function(){
     let dragging =false;
     let offset ={x:0,y:0};
     let current = null;
+    let left = container.offsetLeft;
+    let top = container.offsetTop;
+
     container.onmousedown =(e)=>{
-        // === ->value
         if(e.target.classList.contains("box")){
             dragging =true;
             current = e.target;
@@ -23,8 +63,8 @@ window.addEventListener("load",function(){
     };
     container.onmousemove =(e)=>{
         if(dragging){
-            current.style.left=e.pageX-offset.x+"px";
-            current.style.top=e.pageY-offset.y+"px";
+            current.style.left=e.pageX-offset.x-left+"px";
+            current.style.top=e.pageY-offset.y-top+"px";
         }
     };
 
@@ -37,6 +77,8 @@ window.addEventListener("load",function(){
     let container =section.querySelector(".container");
     let box =section.querySelector(".box")
     let dragging =false;
+    let left = container.offsetLeft;
+    let top = container.offsetTop;
     let offset ={x:0,y:0};
     container.onmousedown =(e)=>{
         // === ->value
@@ -49,8 +91,8 @@ window.addEventListener("load",function(){
     };
     container.onmousemove =(e)=>{
         if(dragging){
-         box.style.left=e.pageX-offset.x+"px";
-         box.style.top=e.pageY-offset.y+"px";
+         box.style.left=e.pageX-offset.x-left+"px";
+         box.style.top=e.pageY-offset.y-top+"px";
         }
     };
 
@@ -82,7 +124,8 @@ window.addEventListener("load",function(){
 
 
 //section5
-//trigger
+//trigger function을 설정한 영역이 아닌
+//다른 영역을 선택 했을 때 설정한 영역의 이벤트가 발생하도록 하는 것
 window.addEventListener("load",function(){
     let section =document.querySelector("#section5");
     let fileButton =section.querySelector(".file-button");

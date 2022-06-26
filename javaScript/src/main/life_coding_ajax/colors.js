@@ -36,12 +36,12 @@ function nightDayHandler(self){
   }
 }
 
-window.addEventListener("load",function(){
-  let ol = document.querySelector("ol")
-  let article = document.querySelector("article");
-  console.log();
-  ol.onclick = (e)=>{
-    if(e.target.nodeName!="A") return;
-    article.innerText ="<h2>HTML</h2> Html is ...";
-  };
-})
+// window.addEventListener("load",function(){
+//   let ol = document.querySelector("ol")
+//   let article = document.querySelector("article");
+//   console.log();
+//   ol.onclick = (e)=>{
+//     if(e.target.nodeName!="A") return;
+//     article.innerText ="<h2>HTML</h2> Html is ...";
+//   };
+// })

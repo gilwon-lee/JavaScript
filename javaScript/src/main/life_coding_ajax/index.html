@@ -12,9 +12,21 @@
     nightDayHandler(this);
   ">
   <ol>
-    <li><a>HTML</a></li>
-    <li><a>CSS</a></li>
-    <li><a>JavaScript</a></li>
+    <li><a onclick="fetch('html').then(function(response){
+      response.text().then(function(text){
+          document.querySelector('article').innerHTML = text;
+          })
+      });">HTML</a></li>
+    <li><a onclick="fetch('css').then(function(response){
+      response.text().then(function(text){
+          document.querySelector('article').innerHTML = text;
+          })
+      });">CSS</a></li>
+    <li><a onclick="fetch('javascript').then(function(response){
+      response.text().then(function(text){
+          document.querySelector('article').innerHTML = text;
+          })
+      });">JavaScript</a></li>
   </ol>
   <h2>WEB</h2>
   <article>article</article>

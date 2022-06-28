@@ -45,3 +45,18 @@ function nightDayHandler(self){
 //     article.innerText ="<h2>HTML</h2> Html is ...";
 //   };
 // })
+
+// 선택하는법 복습
+// window.addEventListener("load",function(){
+//   let container = document.querySelector(".container");
+//   let doc = document.querySelector(".doc");
+//   console.log(container);
+//   console.log(doc);
+
+//   container.onclick = (e)=>{
+//     console.log(e.target.nodeName);
+//     if(e.target.nodeName!="P") return;
+//     doc.innerText = e.target.innerText;
+//   };
+
+// });

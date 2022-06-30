@@ -60,3 +60,25 @@ function nightDayHandler(self){
 //   };
 
 // });
+
+
+function fetchPage(name){
+  console.log(name);
+  fetch(name).then(function(response){
+    response.text().then(function(text){
+        document.querySelector('article').innerHTML = text;
+        })
+  })
+};
+
+if(location.hash){
+  fetchPage(location.hash.substr(2));
+}else{
+  fetchPage('welcome');
+};
+
+fetch('list').then(function(response){
+    response.text().then(function(text){
+        document.querySelector('#nav').innerHTML = text;
+      })
+});

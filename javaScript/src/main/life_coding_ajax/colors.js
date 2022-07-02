@@ -63,7 +63,6 @@ function nightDayHandler(self){
 
 
 function fetchPage(name){
-  console.log(name);
   fetch(name).then(function(response){
     response.text().then(function(text){
         document.querySelector('article').innerHTML = text;
@@ -75,10 +74,21 @@ if(location.hash){
   fetchPage(location.hash.substr(2));
 }else{
   fetchPage('welcome');
-};
-
-fetch('list').then(function(response){
-    response.text().then(function(text){
-        document.querySelector('#nav').innerHTML = text;
-      })
+}
+  fetch('list').then(function(response){
+      response.text().then(function(text){
+        console.log("list:"+text);
+        let items = text.split(',');
+        let i = 0;
+        tags ='';
+        while(i<items.length){
+          let item = items[i];
+          let tag ='<li><a href="#!'+item+'" onclick="fetchPage(\''+item+'\')">'+item+"</a></li>";
+          console.log(item);
+          tags+=tag;
+          i++;
+        }
+        document.querySelector('#nav').innerHTML = tags;
+  })
 });
+
